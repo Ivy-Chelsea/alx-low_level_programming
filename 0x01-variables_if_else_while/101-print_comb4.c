@@ -11,9 +11,9 @@ int main(void)
 	
 	for (i = 0; i < 8 ; i++)
 	{
-		for (v = i + 1; v < 9; v++)
+		for (v = i + 1; v < 9 ; v++)
 		{
-			for (y = v + 1;y < 10; y++)
+			for (y = v + 1; y < 10; y++)
 			{
 				putchar((i % 10) + '0');
 				putchar((v % 10) + '0');
@@ -22,11 +22,11 @@ int main(void)
 				if (i == 7 && v == 8 && y == 9)
 					continue;
 				
-					putchar(',');
-					putchar(' ');
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
-putchar('\n');
-return (0);
+	putchar('\n');
+	return (0);
 }
