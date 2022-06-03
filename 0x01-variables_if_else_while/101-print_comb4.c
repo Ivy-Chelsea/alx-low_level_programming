@@ -9,9 +9,9 @@ int main(void)
 {
 	int i, v, y;
 
-	i=28;
-	v=28;
-	y=28;
+	i = 28;
+	v = 28;
+	y = 28;
 
 	while (v < 38)
 	{
@@ -28,7 +28,7 @@ int main(void)
 					putchar(y);
 					if (i == 36 && v == 35 && y == 37)
 					{
-						break
+						break;
 					}
 					putchar(',');
 					putchar(' ');
