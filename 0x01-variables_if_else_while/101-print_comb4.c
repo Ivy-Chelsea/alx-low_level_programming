@@ -8,37 +8,25 @@
 int main(void)
 {
 	int i, v, y;
-
-	i = 28;
-	v = 28;
-	y = 28;
-
-	while (v < 38)
+	
+	for (i = 0; i < 8 ; i++)
 	{
-		i = 28;
-		while (i < 38)
+		for (v = i + 1; v < 9; v++)
 		{
-			y = 28;
-			while (y < 38)
+			for (y = v + 1;y < 10; y++)
 			{
-				if (v != i && v != y && i != y && v < i && i < y)
-				{
-					putchar(v);
-					putchar(i);
-					putchar(y);
-					if (i == 36 && v == 35 && y == 37)
-					{
-						break;
-					}
+				putchar((i % 10) + '0');
+				putchar((v % 10) + '0');
+				putchar(y % 10) + '0');
+				
+				if (i == 7 && v == 8 && y == 9)
+					continue;
+				
 					putchar(',');
 					putchar(' ');
-				}
-				y++;
 			}
-			i++;
 		}
-		v++;
 	}
-	putchar('\n');
-	return (0);
+putchar('\n');
+return (0);
 }
