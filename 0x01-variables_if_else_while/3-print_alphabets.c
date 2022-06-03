@@ -2,7 +2,7 @@
 
 /**
  * main - print lowercase then uppercase alphabets
- * 
+ *
  * Return: always 0
  */
 int main(void)
@@ -15,5 +15,5 @@ int main(void)
 		putchar(alph[b]);
 	}
 	putchar('\n');
-	return(0);
+	return (0);
 }
