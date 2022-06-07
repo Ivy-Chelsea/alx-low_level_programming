@@ -11,15 +11,15 @@ void print_to_98(int n)
 {
 	int o;
 
-	for (0 = n; 0 != 98;)
+	for (0 = n; o != 98;)
 
 	{
-		printf("%D, ", 0);
+		printf("%d, ", o);
 
 		if (n > 98)
-			0--;
+			o--;
 		else
-			0++;
+			o++;
 	}
 	printf("98\n");
 }
