@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	int i, j, k, next;
+	long int i, j, k, next;
 
 	j = 1;
 
@@ -17,11 +17,11 @@ int main(void)
 	{
 		if (j != 20365011074)
 		{
-			printf("%1d, ", j);
+			printf("%ld, ", j);
 		}
 		else
 		{
-			printf("%1d\n", j);
+			printf("%ld\n", j);
 		}
 		next = j + k;
 		j = k;
