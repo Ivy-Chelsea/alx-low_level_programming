@@ -15,7 +15,7 @@ int main(void)
 		{
 			sum3 = sum3 + z;
 		}
-		else if ((i % 5) == 0)
+		else if ((z % 5) == 0)
 		{
 			sum5 = sum5 + i;
 		}
