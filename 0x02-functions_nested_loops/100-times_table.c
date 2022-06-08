@@ -2,17 +2,14 @@
 
 /**
  * print_times_table - prints n times table starting from 0
- * @n: type  umber
- *
+ * @n: type number
  * Return: 0
  */
 void print_times_table(int n)
 {
-	int x = 0;
-	int y;
-	int z;
+	int x, y, z;
 
-	if (n >=0 && n <= 14)
+	if (n >= 0 && n <= 14)
 	{
 		for (x = 0; x <= n; x++)
 		{
@@ -23,7 +20,7 @@ void print_times_table(int n)
 			{
 				_putchar(',');
 				_putchar(32);
-				_putchar((z / 100 + '0');
+				_putchar((z / 100) + '0');
 				_putchar((z / 10) % 10 + '0');
 				_putchar(z % 10 + '0');
 			}
