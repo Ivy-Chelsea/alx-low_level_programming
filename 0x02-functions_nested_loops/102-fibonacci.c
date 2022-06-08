@@ -17,7 +17,7 @@ int main(void)
 	{
 		if (j != 20365011074)
 		{
-			print("%1d, ", j);
+			printf("%1d, ", j);
 		}
 		else
 		{
