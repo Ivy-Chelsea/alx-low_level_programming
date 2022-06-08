@@ -1,45 +1,53 @@
 #include "main.h"
 
 /**
- * print_times_table - prints n times table starting from 0*
+ * print_times_table - prints n times table starting from 0
+ * @n: type  umber
+ *
  * Return: 0
  */
-void print_times_table(void)
+void print_times_table(int n)
 {
 	int x = 0;
 	int y;
 	int z;
 
-	while (x < 15)
+	if (n >=0 && n <= 14)
 	{
-		y = 0;
-		while (y < 15)
+		for (x = 0; x <= n; x++)
 		{
-			z = x * y;
-
-			if (z > 15)
+			for (y = 0; y <= n; y++)
 			{
-				_putchar(z \ 10 + '0');
+				z = x * y;
+				if (z > 99)
+			{
+				_putchar(',');
+				_putchar(32);
+				_putchar((z / 100 + '0');
+				_putchar((z / 10) % 10 + '0');
 				_putchar(z % 10 + '0');
 			}
-			else if (y != 0)
+			else if (z > 9)
 			{
-				_putchar(' ');
-				_putchar(z + '0');
+				_putchar(',');
+				_putchar(32);
+				_putchar(32);
+				_putchar((z / 10) % 10 + '0');
+				_putchar(z % 10 + '0');
 			}
 			else
 			{
+				if (y != 0)
+				{
+					_putchar(',');
+					_putchar(32);
+					_putchar(32);
+					_putchar(32);
+				}
 				_putchar(z + '0');
 			}
-
-			if (y != 15)
-			{
-				_putchar(',');
-				_putchar(' ');
-			}
-			y++;
 		}
 		_putchar('\n');
-		x++;
+		}
 	}
 }
