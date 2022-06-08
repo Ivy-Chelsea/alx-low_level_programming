@@ -9,7 +9,7 @@ int main(void)
 	unsigned long int sum3, sum5, sum;
 	int z;
 
-	for (z = 0; z < 1024; z++)
+	for (z = 0; z < 1024; ++z)
 	{
 		if ((z % 3) == 0)
 		{
