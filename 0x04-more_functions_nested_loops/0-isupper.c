@@ -7,5 +7,12 @@
  */
 int _isupper(int c)
 {
-	return (c > 'A' && c < 'Z');
+	var c = 'A'
+		
+	if (/[A-Z]/.test(c))
+	{
+		alert('it is uppercase');
+	}
+	
+	return (c);
 }
