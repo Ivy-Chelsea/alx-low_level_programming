@@ -1,18 +1,11 @@
 #include "main.h"
 
 /**
- * _isupper - checks uppercase character
- * @c: tye letter
+ * _isupper - checks for uppercase character
+ * @c: type letter
  * Return: 1 if c is uppercase, 0 otherwise
  */
 int _isupper(int c)
 {
-	var c = 'A'
-		
-	if (/[A-Z]/.test(c))
-	{
-		alert('it is uppercase');
-	}
-	
-	return (c);
+	return (c >= 'A' && c <= 'Z');
 }
