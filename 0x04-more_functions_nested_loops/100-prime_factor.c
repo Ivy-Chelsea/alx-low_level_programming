@@ -11,7 +11,7 @@ int main(void)
 
 	for (t = 3; t < 782849; t = t + 2)
 	{
-		while ((n % t == 0) && (n != t)
+		while ((n % t == 0) && (n != t))
 				n = n / t;
 	}
 	printf("%lu\n", n);
