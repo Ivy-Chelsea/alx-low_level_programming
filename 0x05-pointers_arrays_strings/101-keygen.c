@@ -25,7 +25,7 @@ int main(void)
 		{
 			n = 2772 - sum - '0';
 			sum += n;
-			putchra(n + '0');
+			putchar(n + '0');
 			break;
 		}
 	}
