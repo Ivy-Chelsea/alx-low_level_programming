@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * cap_string - capitalize words of the string
+ * cap_string - capitalizes string words
  * @s: the string
  *
  * Return: resulting string
@@ -20,9 +20,9 @@ char *cap_string(char *s)
 
 		for (m = 0; m < 13; m++)
 		{
-			if (c[n] == spe[m])
+			if (s[n] == spe[m])
 			{
-				if (s[n + 1] >= 'a' && c[n + 1] <= 'z')
+				if (s[n + 1] >= 'a' && s[n + 1] <= 'z')
 				{
 					s[n + 1] -= 32;
 				}
