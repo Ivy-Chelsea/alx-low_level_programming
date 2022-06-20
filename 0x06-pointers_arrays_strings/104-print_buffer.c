@@ -1,79 +1,52 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
- * isPrintableASCII - determines if n is a printable ASCII char
- * @n: integer
- * Return: 1 if true, 0 otherwise
- */
-int isPrintableASCII(int n)
-{
-	return (n >= 32 && n <= 126);
-}
-
-/**
- * printHexes - prints hexadecimal values in formatted form
- * @b: the string
- * @start: starting osition
- * @end: ending position
- */
-void printHexes(char *b, int start, int end)
-{
-	int i = 0;
-
-	while (i < 10)
-	{
-		if (i < end)
-			printf("%02x", *(b + start + i));
-		else
-			printf(" ");
-		if (i % 2)
-			printf(" ");
-		i++
-	}
-}
-
-/**
- * printASCII - prints ascii values for string b,
- * formatted to replace nonprintable character with '.'
- * @b: the string
- * @start: starting point
- * @end: ending point
- */
-void printASCII(char *b, int start, int end)
-{
-	int ch, i = 0;
-
-	while (i < end)
-	{
-		ch = *(b + 1 + start);
-		if (!isPrintableASCII(ch))
-			ch = 46;
-		printf("%c", ch);
-		i++;
-	}
-}
-
-/**
- * print_buffer - prints buffer
- * @b: string
- * @size: size of buffer
+ * print_buffer - Prints a buffer 10 bytes at a time, starting with
+ *                the byte position, then showing the hex content,
+ *                then displaying printable charcaters.
+ * @b: The buffer to be printed.
+ * @size: The number of bytes to be printed from the buffer.
  */
 void print_buffer(char *b, int size)
 {
-	int start, end;
+	int byte, index;
 
-	if (size > 0)
+	for (byte = 0; byte < size; byte += 10)
 	{
-		for (start = 0; start < size; sart += 10)
+		printf("%08x: ", byte);
+
+		for (index = 0; index < 10; index++)
 		{
-			end = (size - start < 10) ? size - start : 10;
-			printf("%08x: ", start);
-			printHexes(b, start, end);
-			printASCII(b, start, end);
-			printf("\n");
+			if ((index + byte) >= size)
+				printf("  ");
+
+			else
+				printf("%02x", *(b + index + byte));
+
+			if ((index % 2) != 0 && index != 0)
+				printf(" ");
 		}
+
+		for (index = 0; index < 10; index++)
+		{
+			if ((index + byte) >= size)
+				break;
+
+			else if (*(b + index + byte) >= 31 &&
+				 *(b + index + byte) <= 126)
+				printf("%c", *(b + index + byte));
+
+			else
+				printf(".");
+		}
+
+		if (byte >= size)
+			continue;
+
+		printf("\n");
 	}
-	else
-		print("\n");
+
+	if (size <= 0)
+		printf("\n");
 }
