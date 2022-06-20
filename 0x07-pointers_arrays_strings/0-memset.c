@@ -4,7 +4,6 @@
  * *_memset - fills memory with a constant byte
  * @s: pointer
  * @b: character to copy
- *
  * @n: number of times to copy integer b
  *
  * Return: pointer to the memory
