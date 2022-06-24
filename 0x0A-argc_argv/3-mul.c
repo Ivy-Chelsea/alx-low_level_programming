@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - multiplies two numbers
@@ -8,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int y, p, mul = 0;
+	int y, p, mul;
 
 	if (argc != 3)
 	{
