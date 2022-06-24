@@ -3,8 +3,8 @@
 
 /**
  * main - adds positive numbers
- * @argc: number of arguments
- * @argv: array of pointers to string
+ * @argc: The number of arguments 
+ * @argv: An array of pointers to the string
  * Return: 1 if number contains symbols that are not digits, 0 otherwise
  */
 int main(int argc, char *argv[])
@@ -17,7 +17,7 @@ int main(int argc, char *argv[])
 		{
 			if (argv[y][p] < '0' || argv[y][p] > '9')
 			{
-				print("Error\n");
+				printf("Error\n");
 				return (1);
 			}
 		}
