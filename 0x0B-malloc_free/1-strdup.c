@@ -10,6 +10,9 @@ char *_strdup(char *str)
 {
 	char *lib;
 	unsigned int y, k;
+	
+	y = 0;
+	k = 0;
 
 	if (str == NULL)
 		return (NULL);
