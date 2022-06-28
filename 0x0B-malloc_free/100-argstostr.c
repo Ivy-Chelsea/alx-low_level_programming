@@ -2,14 +2,15 @@
 #include <stdlib.h>
 
 /**
- * argstostr - concatenates all arguments of the program
- * @ac: number of arguments passed
- * @av: rray of poiters to argument
- * Retrun: pointer to new string on success, NULL otherwise
+ * argstostr - Concatenates all arguments of the program into string
+ * @ac: The number of arguments passed to program.
+ * @av: An array of pointers to the argumennts
+ * Return: NULL on error, pointer to string otherwise
  */
 char *argstostr(int ac, char **av)
 {
-	char *strn, rg, bt, i,s = ac;
+	char *strn;
+	int rg, bt, i, s = ac;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
