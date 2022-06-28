@@ -2,35 +2,35 @@
 #include <stdlib.h>
 
 /**
- * *str_concat - concatenates 2 strings
+ * str_concat - Concatenates two strings.
  * @s1: string 1
  * @s2: string 2
- * Return: pointer to string on success, NULL on error
+ * Return: NULL on error, pointer to string otherwise
  */
 char *str_concat(char *s1, char *s2)
 {
 	char *s3;
-	int w, e = 0, len = 0;
+	int j, k = 0, len = 0;
 
 	if (s1 == NULL)
 		s1 = "";
 
 	if (s2 == NULL)
-		s2 = "';
+		s2 = "";
 
-	for (w = 0; s1[w] || s2[w]; w++)
+	for (j = 0; s1[j] || s2[j]; j++)
 		len++;
 
 	s3 = malloc(sizeof(char) * len);
 
 	if (s3 == NULL)
-	return (NULL);
+		return (NULL);
 
-	for (w = 0; s1[w]; w++)
-		s3[e++] = s1[w];
+	for (j = 0; s1[j]; j++)
+		s3[k++] = s1[j];
 
-	for (w = 0; s2[e++]; w++);
-	     s3[e++] = s2[w];
+	for (j = 0; s2[j]; j++)
+		s3[k++] = s2[j];
 
-	return (w);
-}	
+	return (s3);
+}
