@@ -1,13 +1,12 @@
 #include "main.h"
 
 /**
- * main - copies the content of a file to another file
- * @argc: number of arguments passed to the program
+ * main - copies content of a file to another file
+ * @argc: number of arguments
  * @argv: array of arguments
- *
- * Return: Always 0 (Success)
+ * Return: 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char *atgv[])
 {
 	int fd_r, fd_w, r, a, b;
 	char buf[BUFSIZ];
@@ -45,7 +44,7 @@ int main(int argc, char *argv[])
 		if (a < 0)
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_r);
 		if (b < 0)
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_w);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %D\n", fd_w);
 		exit(100);
 	}
 	return (0);
