@@ -6,7 +6,7 @@
  * @argv: array of arguments
  * Return: 0
  */
-int main(int argc, char *atgv[])
+int main(int argc, char *argv[])
 {
 	int fd_r, fd_w, r, a, b;
 	char buf[BUFSIZ];
