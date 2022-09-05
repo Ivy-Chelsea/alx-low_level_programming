@@ -20,7 +20,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 
 	tmp = 0;
 	for (i = 0; i < len; i++)
-		tmp += arv[1][i];
+		tmp += argv[1][i];
 	password[1] = codex[(tmp ^ 79) & 63];
 
 	tmp = 1;
