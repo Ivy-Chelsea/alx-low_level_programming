@@ -71,7 +71,7 @@ hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
  * @ht: hash table to add the element to
  * @key: key of the element, gives the index in the array
  * @value: value of the element to store in the array
- * Retirn: 1 on succes, 0 otherwise
+ * Return: 1 on succes, 0 otherwise
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
