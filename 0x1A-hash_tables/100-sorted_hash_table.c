@@ -5,7 +5,7 @@
  * @size: size of the array of linked list in the table
  * Return: shash_table_t struct
  */
-shashtable_t *shash_table_create(unsigned long int size)
+shash_table_t *shash_table_create(unsigned long int size)
 {
 	shash_table_t *sht;
 
