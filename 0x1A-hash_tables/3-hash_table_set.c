@@ -42,11 +42,11 @@ int check_key(hash_node_t *ht, const char *key)
  * @value: value to add in the node
  * Return: address to the new element, or NULL on error
  */
-hash_node_t **add_node(hash_node_t **head, const char *key, const char *value)
+hash_node_t *add_node(hash_node_t **head, const char *key, const char *value)
 {
 	hash_node_t *new;
 
-	new - malloc(sizeof(hash_node_t));
+	new = malloc(sizeof(hash_node_t));
 	if (!new)
 		return (NULL);
 
