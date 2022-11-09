@@ -2,7 +2,7 @@
 #include <unistd.h>
 /**
  * main - print "and that piece of art is useful"
- *  Return: 1 if succesful
+ *  Return: 1 if succesful, 0 otherwise
  */
 int main(void)
 {
