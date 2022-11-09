@@ -1,8 +1,7 @@
-#include m.h"
-
+#include "m.h"
 /**
 * print_school - entry point
-* Return: nothing
+* Return: Nothing
 */
 void print_school(void)
 {
