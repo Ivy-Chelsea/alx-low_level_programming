@@ -6,6 +6,7 @@
 #include <stdlib.h>
 
 /**
+ * struct listint_s - singly linked list
  * @n: integer
  * @index: index of the node in the list
  * @next: Pointer to the next node
@@ -14,7 +15,7 @@ typedef struct listint_s
 {
 	int n;
 	size_t index;
-	struct listint_s *next
+	struct listint_s *next;
 } listint_t;
 
 /**
